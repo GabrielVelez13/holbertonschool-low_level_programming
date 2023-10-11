@@ -2,11 +2,8 @@
 #include <string.h>
 
 /**
-* pus - outputs a string
-(*
-* Description: Longer description of the function)?
-(* section header: Section description)*
-* Return: Description of the returned value
+* main - outputs a string
+* Return: 0 to make sure its working
 */
 
 int main(void)
