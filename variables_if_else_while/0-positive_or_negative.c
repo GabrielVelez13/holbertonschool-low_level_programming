@@ -12,9 +12,9 @@
 int main(void)
 {
 	int n;
-	char positive[] = "is greater";
-	char zero[] = "is zero";
-	char negative[] = "is negative";
+	char positive[] = "is positive\n";
+	char zero[] = "is zero\n";
+	char negative[] = "is negative\n";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
