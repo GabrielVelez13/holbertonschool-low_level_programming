@@ -21,15 +21,15 @@ int main(void)
 
 	if (n > 0)
 	{
-		printf("%s", positive);
+		printf("%d %s", n, positive);
 	}
 	if (n == 0)
 	{
-		printf("%s", zero);
+		printf("%d %s", n, zero);
 	}
 	if (n < 0)
 	{
-		printf("%s", negative);
+		printf("%d %s", n, negative);
 	}
 
 	return (0);
