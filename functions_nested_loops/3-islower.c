@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-#include <ctype.h>
 
 /**
 * _islower - checks if a word is lowercase or not.
