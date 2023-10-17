@@ -18,7 +18,7 @@ void times_table(void)
 			product = i * j;
 			if (j == 9)
 			{
-				printf("%2d$", product);
+				printf("%2d", product);
 			}
 			else
 			{
