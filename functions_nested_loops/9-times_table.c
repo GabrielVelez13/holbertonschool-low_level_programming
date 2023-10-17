@@ -20,7 +20,8 @@ void times_table(void)
 			{
 				printf("%2d", product);
 			}
-			else if (j == 0) {
+			else if (j == 0)
+			{
 				printf("%d, ", product);
 			}
 			else
