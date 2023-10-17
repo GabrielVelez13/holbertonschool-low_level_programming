@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 
 void print_alphabet(void);
@@ -11,5 +12,6 @@ int _islower(int c);
 char _putchar(char r);
 int _isalpha(int c);
 int print_sign(int n);
+int _abs(int);
 
 #endif
