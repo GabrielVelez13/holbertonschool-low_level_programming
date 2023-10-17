@@ -5,7 +5,7 @@
 /**
 * _islower - checks if a word is lowercase or not.
 *
-* c - is the input parameter of function.
+* @c: is the input parameter of function.
 *
 * Return: 1 if lowercase, 0 if not.
 */
