@@ -12,7 +12,11 @@
 
 int _islower(int c)
 {
-	if (islower(c) != 0)
+	if (c == 0 || c == 20)
+	{
+		return (0);
+	}
+	else if (c < 65 || c > 90)
 	{
 		return (1);
 	}
