@@ -21,7 +21,14 @@ int main(void)
 		}
 		else if (count % 5 == 0)
 		{
-			printf("Buzz ");
+			if (count != 100)
+			{
+				printf("Buzz ");
+			}
+			else
+			{
+				printf("Buzz\n");
+			}
 		}
 		else
 		{
@@ -29,6 +36,5 @@ int main(void)
 		}
 		count++;
 	}
-	printf("\n");
 	return (0);
 }
