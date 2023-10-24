@@ -1,0 +1,1 @@
+Here I shall learn about pointers.Here I shall learn about pointers.Here I shall learn about pointers.Here I shall learn about pointers.Here I shall learn about pointers.Here I shall learn about pointers.Here I shall learn about pointers.Here I shall learn about pointers.Here I shall learn about pointers.
