@@ -11,11 +11,6 @@ void puts2(char *str)
 {
 	int i, len;
 
-	if (!str)
-	{
-		return;
-	}
-
 	len = strlen(str);
 
 	for (int i = 0; i < len; i += 2)
