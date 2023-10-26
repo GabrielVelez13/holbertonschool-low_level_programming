@@ -13,11 +13,6 @@ int _atoi(char *s)
 {
 	int sign = 1, base = 0, i = 0;
 
-	if (s == 0)
-	{
-		return (0);
-	}
-
 	while (s[i] == ' ')
 	{
 		i++;
