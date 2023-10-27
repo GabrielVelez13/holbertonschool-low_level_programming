@@ -19,8 +19,4 @@ void reverse_array(int *a, int n)
 		a[len - i - 1] = a[i];
 		a[i] = temp;
 	}
-	for (i = 0; i < len; i++)
-	{
-		printf("%d ", a[i]);
-	}
 }
