@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -12,16 +10,19 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	while (*dest != '\0')
+	int i = 0;
+	int j = 0;
+
+	while (dest[i])
 	{
-		dest++;
+		i++;
 	}
 
-	while (n--)
+	while (j < n && src[i] != '\0')
 	{
-		*dest++ = *src++;
+		dest[i++] = src[j++];
 	}
 
-	*dest = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
