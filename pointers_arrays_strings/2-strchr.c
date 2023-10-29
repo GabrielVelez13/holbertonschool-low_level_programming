@@ -19,6 +19,7 @@ char *_strchr(char *s, char c)
 			check = true;
 			return (p);
 		}
+		s++;
 	}
 
 	if (check == false)
