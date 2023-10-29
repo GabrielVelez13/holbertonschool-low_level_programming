@@ -2,6 +2,7 @@
 #define main_h
 #include <stdio.h>
 #include <string.h>
+#include "stdbool.h"
 
 char _putchar(char r);
 void reset_to_98(int *n);
@@ -25,5 +26,6 @@ char *cap_string(char *);
 char *leet(char *);
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
+char *_strchr(char *s, char c);
 
 #endif
