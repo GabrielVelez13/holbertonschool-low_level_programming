@@ -15,6 +15,7 @@ void print_chessboard(char (*a)[8])
 		{
 			if (a[i][j] >= 'a' && a[i][j] <= 'z')
 			{
+				printf("%c", a[i][j]);
 			}
 			else if (a[i][j] >= 'A' && a[i][j] <= 'Z')
 			{
