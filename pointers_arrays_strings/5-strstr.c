@@ -13,7 +13,7 @@ char *_strstr(char *haystack, char *needle)
 
 	for (; *haystack; haystack++)
 	{
-		if (strncmp(haystack, needle, len))
+		if (strncmp(haystack, needle, len) == 0)
 		{
 			return (haystack);
 		}
