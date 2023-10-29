@@ -9,23 +9,10 @@
 
 char *_strchr(char *s, char c)
 {
-	char *p = s;
-	bool check = false;
-
-	while (*s)
+	while (*s && *s != c)
 	{
-		if (*s == c)
-		{
-			check = true;
-			return (p);
-		}
 		s++;
 	}
 
-	if (check == false)
-	{
-		return (NULL);
-	}
-
-	return (p);
+	return ((char *)(c == *s ? s : NULL));
 }
