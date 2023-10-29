@@ -13,7 +13,10 @@ void print_chessboard(char (*a)[8])
 	{
 		for (j = 0; j < 8; j++)
 		{
-			if ((a[i][j] >= 'a' && a[i][j] <= 'z') || (a[i][j] >= 'A' && a[i][j] <= 'Z'))
+			if (a[i][j] >= 'a' && a[i][j] <= 'z')
+			{
+			}
+			else if (a[i][j] >= 'A' && a[i][j] <= 'Z')
 			{
 				printf("%c", a[i][j]);
 			}
