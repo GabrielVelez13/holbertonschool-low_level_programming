@@ -32,5 +32,9 @@ int primeHelper(int n, int i)
 
 int is_prime_number(int n)
 {
+	if (n <= 1)
+	{
+		return (0);
+	}
 	return (primeHelper(n, 2));
 }
