@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
-* _sqrt_recursion - find the natural square root of n.
 * guessing - guessing by checking numbers 1 by 1 until finding the square root.
 * @n: parameter of the function.
 * @guess: parameter of the function.
@@ -20,6 +19,12 @@ int guessing(int n, int guess)
 	}
 	return (guessing(n, guess + 1));
 }
+
+/**
+* _sqrt_recursion - find the natural square root of n.
+* @n: parameter of the function.
+* Return: ends the recursion.
+**/
 
 int _sqrt_recursion(int n)
 {
