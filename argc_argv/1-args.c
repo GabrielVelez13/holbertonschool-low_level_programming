@@ -10,6 +10,8 @@
 
 int main(int argc, char *argv[])
 {
+	argv[0] = "life is good";
+
 	printf("%d\n", argc - 1);
 	return (0);
 }
