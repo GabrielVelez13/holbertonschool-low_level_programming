@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	}
 	for (j = 1; j < argc; j++)
 	{
-		val = strtol(argv[j], &next, 10);
+		strtol(argv[j], &next, 10);
 
 		if ((next == argv[j]) || (*next != '\0'))
 		{
