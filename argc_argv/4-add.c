@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-	for (j = 0; j < argc; j++)
+	for (j = 1; j < argc; j++)
 	{
 		if (!isdigit(*argv[j]))
 		{
