@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int x = argc;
-	int product = atoi(argv[x]) * atoi(argv[x - 1]);
+	int product = atoi(argv[x - 1]) * atoi(argv[x - 2]);
 
 	printf("%d\n", product);
 	return (0);
