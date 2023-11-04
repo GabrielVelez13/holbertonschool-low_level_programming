@@ -13,13 +13,15 @@ int countCents(int cents);
 
 int main(int argc, char *argv[])
 {
+	int cents;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	int cents = atoi(argv[1]);
+	cents = atoi(argv[1]);
 
 	if (cents <= 0)
 	{
