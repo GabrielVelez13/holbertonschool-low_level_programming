@@ -9,7 +9,7 @@
 
 char *_strdup(char *str)
 {
-	int len;
+	int len, i, j;
 	char *newstr;
 
 	if (str == NULL)
@@ -17,10 +17,9 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	while (*str != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		len++;
-		str++;
 	}
 
 	newstr = malloc(len + 1);
