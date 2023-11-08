@@ -1,15 +1,13 @@
 #include "main.h"
-
 /**
 * _strdup - creates a new array that copies.
 * @str: a string.
 * Return: On success 0.
 * On error, NULL
 */
-
 char *_strdup(char *str)
 {
-	int len;
+	int len, i;
 	char *newstr;
 
 	if (str == NULL)
@@ -23,12 +21,18 @@ char *_strdup(char *str)
 		str++;
 	}
 
-	newstr = malloc(len + 1);
+	newstr = malloc((sizeof(char) * len) + 1);
 
-	if (newstr != NULL)
+	if (newstr == NULL)
 	{
-		*newstr = *str;
+		return (NULL);
 	}
 
+	for (i = 0; i < len; i++)
+	{
+		newstr[i] = str[i];
+	}
+
+	newstr[len] = '\0';
 	return (newstr);
 }
