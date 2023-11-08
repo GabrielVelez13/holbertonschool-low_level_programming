@@ -27,7 +27,12 @@ char *_strdup(char *str)
 
 	if (newstr != NULL)
 	{
-		newstr = str;
+		while (*str != '\0')
+		{
+			*newstr = *str;
+			newstr++;
+			str++;
+		}
 	}
 
 	return (newstr);
