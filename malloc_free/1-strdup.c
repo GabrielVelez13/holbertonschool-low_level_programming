@@ -7,7 +7,7 @@
 */
 char *_strdup(char *str)
 {
-	int len, i;
+	int len = 0, i = 1;
 	char *newstr;
 
 	if (str == NULL)
@@ -28,9 +28,10 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	for (i = 0; i < len; i++)
+	while (i < len)
 	{
 		newstr[i] = str[i];
+		i++;
 	}
 
 	newstr[len] = '\0';
