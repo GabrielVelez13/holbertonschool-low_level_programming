@@ -2,8 +2,8 @@
 /**
 * malloc_checked - points to the memory address.
 * @b: an unsigned int.
-* Return: On success an array of zeroes.
-* On error, NULL
+* Return: On success the memory address.
+* On error, 98.
 */
 void *malloc_checked(unsigned int b)
 {
