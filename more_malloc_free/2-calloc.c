@@ -3,7 +3,7 @@
 * _calloc - allocates memory and sets it to zero
 * @nmemb: an unsigned int.
 * @size: an unsigned int.
-* Return: On success a concatenated string.
+* Return: On success a an array.
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
