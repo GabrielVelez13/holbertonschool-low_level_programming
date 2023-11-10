@@ -8,14 +8,14 @@
 int *array_range(int min, int max)
 {
 	int *pointer;
-	int i = 0, n = max - min;
+	int i = 0, n = max - min + 1;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
 
-	pointer = malloc(sizeof(pointer) * n);
+	pointer = malloc(sizeof(*pointer) * n);
 
 	if (pointer == NULL)
 	{
