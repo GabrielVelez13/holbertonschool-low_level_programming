@@ -39,11 +39,14 @@ char *_strdup(char *src)
 {
 	int len = _strlen(src) + 1;
 	char *dup = malloc(len);
-
-	if (dup != NULL)
+	
+	if (dup == NULL)
 	{
-		_strcpy(dup, src);
+		free(dup);
+		return (NULL);
 	}
+	_strcpy(dup, src);
+
 	return (dup);
 }
 
@@ -65,8 +68,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (theOther == NULL)
 	{
-		free(theOther->name);
-		free(theOther->owner);
 		free(theOther);
 		return (NULL);
 	}
