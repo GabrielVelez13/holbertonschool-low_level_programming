@@ -4,7 +4,6 @@
 * free_dog - frees the dog struct
 * @d: d is the struct dog.
 */
-
 void free_dog(dog_t *d)
 {
 	if (d != NULL)
