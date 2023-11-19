@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
 	if (get_op_func(op) == NULL)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	if ((*op == '/' && n2 == 0) || (*op == '%' && n2 == 0))
 	{
 		printf("Error\n");
-		exit(98);
+		exit(100);
 	}
 
 	printf("%d\n", get_op_func(op)(n1, n2));
