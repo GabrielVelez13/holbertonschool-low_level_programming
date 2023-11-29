@@ -11,8 +11,8 @@ size_t print_list(const list_t *h)
 
 	if (h == NULL)
 	{
-		printf("Error\n");
-		return (1);
+		printf("[0] (nil)\n");
+		return (count);
 	}
 
 	while (h != NULL)
