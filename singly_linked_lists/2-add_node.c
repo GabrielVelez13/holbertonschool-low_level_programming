@@ -1,5 +1,5 @@
-#include "lists.h"
 #include <string.h>
+#include "lists.h"
 
 /**
 * add_node - returns a new link added to list
