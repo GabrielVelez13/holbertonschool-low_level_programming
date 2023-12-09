@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* create_file - creates a file with the data of text_content
+* append_text_to_file - creates a file with the data of text_content
 * @filename: points to the filename
 * @text_content: some text
 * Return: 1, or -1 if failed.
