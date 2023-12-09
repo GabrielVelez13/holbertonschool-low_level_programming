@@ -28,6 +28,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (out == -1)
 	{
+		close(in);
 		return (-1);
 	}
 
