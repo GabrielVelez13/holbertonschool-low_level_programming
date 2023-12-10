@@ -11,13 +11,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		return (NULL);
 	}
-	hash_table_t *ht = malloc(sizeof(*ht));
+	hash_table_t *ht;
 
+	ht = malloc(sizeof(*ht));
 	if (ht == NULL)
 	{
 		return (NULL);
 	}
+
 	ht->size = size;
 	ht->array = calloc(sizeof(hash_node_t *), ht->size);
+
 	return (ht);
 }
