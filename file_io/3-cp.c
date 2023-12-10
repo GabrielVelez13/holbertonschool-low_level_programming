@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	}
 	input = read(f_from, buffer, 1024);
 	f_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | 0664);
-	while (input == read(f_from, buffer, 1024) != 0)
+	while ((input = read(f_from, buffer, 1024)) != 0)
 	{
 		if (input == -1)
 		{
