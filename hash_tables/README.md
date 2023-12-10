@@ -1,0 +1,1 @@
+Here I shall learn about hash tables and how to implement them.
