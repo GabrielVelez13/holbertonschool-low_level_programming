@@ -11,7 +11,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	char *VCopy;
 	hash_node_t *Chain; /*it never breaks*/
-	unsigned long int index;
+	unsigned long int i, index;
 
 	if (ht == NULL || key == NULL || value == NULL || *key == '\0')
 		return (0);
@@ -20,14 +20,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	/*if key exists then update value*/
-	
-	if (strcmp(ht->array[index]->key, key) == 0)
+	for (i = index; ht->array[i]; i++)
 	{
-		free(ht->array[index]->value);
-		ht->array[index]->value = VCopy;
-		return (1);
+		if (strcmp(ht->array[i]->key, key) == 0)
+		{
+			free(ht->array[i]->value);
+			ht->array[i]->value = VCopy;
+			return (1);
+		}
 	}
-
 	/*create head for the array in the hash*/
 	Chain = malloc(sizeof(hash_node_t));
 	if (Chain == NULL)
