@@ -1,22 +1,30 @@
 #include "hash_tables.h"
 
+/**
+* hash_table_get - gets the value of a given key
+* @ht: pointer to the hash table
+* @key: key to add - cannot empty string
+* @value: value associated with key
+* Return: 0
+*/
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int i, index;
-	
+	unsigned long int index;
+	hash_node_t *temp;
+
 	if (ht == NULL || key == NULL )
 		return (NULL);
-	
+
 	index = key_index((const unsigned char *)key, ht->size);
-	/*if key exists then update value*/
-	for (i = index; ht->array[i]; i++)
+
+	temp = ht->array[index];
+	while (temp->next != NULL)
 	{
-		if (strcmp(ht->array[i]->key, key) == 0)
+		if (strcmp(temp->key, key) == 0)
 		{
-			return (ht->array[i]->value);
+			return (temp->value);
 		}
+		temp = temp->next;
 	}
-	/*create head for the array in the hash*/
-	
 	return (NULL);
 }

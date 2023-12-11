@@ -20,15 +20,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	/*if key exists then update value*/
-	for (i = index; ht->array[i]; i++)
+	
+	if (strcmp(ht->array[i]->key, key) == 0)
 	{
-		if (strcmp(ht->array[i]->key, key) == 0)
-		{
-			free(ht->array[i]->value);
-			ht->array[i]->value = VCopy;
-			return (1);
-		}
+		free(ht->array[i]->value);
+		ht->array[i]->value = VCopy;
+		return (1);
 	}
+
 	/*create head for the array in the hash*/
 	Chain = malloc(sizeof(hash_node_t));
 	if (Chain == NULL)
