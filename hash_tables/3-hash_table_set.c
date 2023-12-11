@@ -38,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	/*key that head*/
 	Chain->key = strdup(key);
-	if (Chain->value == NULL)
+	if (Chain->key == NULL)
 	{
 		free(VCopy);
 		return (0);
