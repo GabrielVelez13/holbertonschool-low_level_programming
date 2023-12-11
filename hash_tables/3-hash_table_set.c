@@ -48,6 +48,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	Chain->value = VCopy;
 	Chain->next = ht->array[index];
 	ht->array[index] = Chain;
-
 	return (1);
 }
