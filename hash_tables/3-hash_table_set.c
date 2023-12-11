@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *Chain; /*it never breaks*/
 	unsigned long int i, index;
 
-	if (ht == NULL || key == NULL || value == NULL || *key != '\0')
+	if (ht == NULL || key == NULL || value == NULL || *key == '\0')
 		return (0);
 	VCopy = strdup(value);
 	if (VCopy == NULL)
@@ -41,11 +41,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (Chain->key == NULL)
 	{
 		free(VCopy);
+		free(Chain);
 		return (0);
 	}
 	/*link this struct to hash table*/
 	Chain->value = VCopy;
 	Chain->next = ht->array[index];
 	ht->array[index] = Chain;
+
 	return (1);
 }
