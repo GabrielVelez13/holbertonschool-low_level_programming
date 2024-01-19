@@ -9,12 +9,12 @@
 */
 int binary_search(int *array, size_t size, int value)
 {
-	int i = 0, first = 0, mid, last = (int)size;
+	int first = 0, mid, last = (int)size - 1;
 
 	while (first <= last)
 	{
 		mid = (first + last) / 2;
-
+		printBinaryArray(array, first, last);
 		if (array[mid] == value)
 		{
 			return (mid);
@@ -27,6 +27,30 @@ int binary_search(int *array, size_t size, int value)
 		{
 			first = mid + 1;
 		}
+
 	}
 	return (-1);
+}
+
+/**
+* printBinaryArray - Prints the part of the array thats being searched.
+* @array: The array to search in.
+* @first: The first element checked.
+* @last: The last element checked.
+*/
+void printBinaryArray(int *array, int first, int last)
+{
+	bool comma = false;
+
+	printf("Searching in array: ");
+	while (array && first < last + 1)
+	{
+		if (comma)
+			printf(", ");
+
+		printf("%d", array[first]);
+		++first;
+		comma = true;
+	}
+	printf("\n");
 }
